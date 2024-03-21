@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+    <script>
+        function checkRedirect(event) {
+            if (event.key === 'Enter') {
+                var inputText = document.getElementById('inputText').value;
+                if (inputText === '1357') {
+                    window.location.replace("index2.html");
+                }
+            }
+        }
+    </script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Please enter pin:</p>
+        <input id="inputText" type="text" onkeypress="checkRedirect(event)">
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <div class="grid" id="buttonGrid"></div>
+    </main>
+  
+    <script>
+        const buttonGrid = document.getElementById('buttonGrid');
+
+        function createButtons() {
+          
+            for (let i = 0; i > -1; i++) { // Change 100 to the desired number of buttons
+                const button = document.createElement('button');
+                button.textContent = `Button ${i + 1}`;
+                buttonGrid.appendChild(button);
+            }
+        }
+
+        createButtons();
+
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                createButtons();
+            }
+        });
+    </script>
+</body>
+</html>
